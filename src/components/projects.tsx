@@ -71,7 +71,7 @@ export const Projects = () => {
       title: "Surya Namaskar Trainer",
       description: "Developed an interactive platform to aid beginners in mastering Surya Namaskara yoga poses. The platform provides real-time feedback to ensure correct posture and alignment.",
       tools: ["Python", "OpenCV", "MediaPipe"],
-      githubLink: "#",
+      githubLink: "https://github.com/Jhanavi-24/Surya-Namaskar-Trainer",
       image: SunImg,
       category: "computer-vision"
     },
@@ -79,7 +79,7 @@ export const Projects = () => {
       title: "Warehouse Robot using Q-Learning and SARSA",
       description: "Developed an RL Agent that can pick up a parcel from a given location and dropoff the parcel off at a given location by using Q-Learning and SARSA Algorithm.",
       tools: ["Python", "Q-Learning", "SARSA", "Gymnasium"],
-      githubLink: "#",
+      githubLink: "https://github.com/Jhanavi-24/Warehouse_robot_reinforcement_learning",
       image: warehouse,
       category: "reinforcement-learning"
     },
@@ -87,7 +87,7 @@ export const Projects = () => {
       title: "AI Recipe Generator",
       description: "Developed an AI Food Generator using Python and Flask to generate food recipes from image and text inputs. Enhanced user experience with a chatbot powered by OpenAI for interactive recipe suggestions.",
       tools: ["Python", "Flask", "OpenAI"],
-      githubLink: "#",
+      githubLink: "https://github.com/Jhanavi-24/AI-Food-Bot",
       image: "https://img.heroui.chat/image/food?w=800&h=400&u=recipe1",
       category: "nlp"
     },
@@ -95,7 +95,7 @@ export const Projects = () => {
       title: "Crop Prediction using ThingSpeak",
       description: "Developed a machine learning system that predicts optimal crop selection based on soil and environmental data collected through IoT sensors. The system integrates with ThingSpeak for real-time data analysis and visualization.",
       tools: ["Python", "ThingSpeak API", "Machine Learning", "IoT", "Sensor Data"],
-      githubLink: "#",
+      githubLink: "https://github.com/Jhanavi-24/Crop-Prediction-using-ThingSpeak",
       image: crop,
       category: "machine-learning"
     }
