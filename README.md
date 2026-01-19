@@ -1,3 +1,0 @@
-# Jhanavi Putcha - Portfolio
-
-
