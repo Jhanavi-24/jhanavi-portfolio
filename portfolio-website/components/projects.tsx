@@ -1,11 +1,52 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Eye, Bot, Dumbbell } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { Highlight } from "@/components/keyword-highlight"
+import { ExternalLink, Github, Eye, Bot, Dumbbell, Music, BarChart3, Sprout } from "lucide-react"
+
 
 const projects = [
+  {
+    title: "Music Generator using Genetic Algorithm",
+    icon: Music,
+    problem:
+      "Most music generators depend on large datasets, making it hard to personalize output without retraining.",
+    solution:
+      "Built a melody generator that evolves music using a genetic algorithm and improves based on iterative selection (fitness).",
+    solutionHighlights: ["genetic algorithm", "evolves", "fitness"],
+    tools: ["TypeScript", "Genetic Algorithms", "UI/Frontend"],
+    outcome:
+      "Generates evolving melodies with controllable variation and selection-driven improvement.",
+    github: "https://github.com/Jhanavi-24/Music-Generator-using-Genetic-Algorithm",
+  },
+  {
+    title: "Comparative Analysis of RL Algorithms (Discrete & Continuous)",
+    icon: BarChart3,
+    problem:
+      "Choosing the right RL algorithm depends heavily on the action space and environment dynamics.",
+    solution:
+      "Implemented and compared PPO, DQN, DDQN, and A2C across discrete and continuous action-space settings.",
+    solutionHighlights: ["PPO", "DQN", "DDQN", "A2C"],
+    tools: ["Python", "Reinforcement Learning", "Jupyter Notebook"],
+    outcome:
+      "Analysis highlights trade-offs in stability, sample efficiency, and performance by action space.",
+    github:
+      "https://github.com/Jhanavi-24/Comparative_Analysis_of_algorithms_in_discrete_and_continuous_action_spaces",
+  },
+  {
+    title: "Crop Prediction using ThingSpeak",
+    icon: Sprout,
+    problem:
+      "Farmers need data-driven crop recommendations based on real-time environmental conditions.",
+    solution:
+      "Built a crop prediction workflow using ThingSpeak sensor data (temperature, pH, rainfall, humidity) to guide crop selection.",
+    solutionHighlights: ["ThingSpeak", "real-time", "prediction"],
+    tools: ["Python", "ThingSpeak", "Data Analysis", "Jupyter Notebook"],
+    outcome:
+      "Improved crop selection decisions using real-time sensor-driven insights.",
+    github: "https://github.com/Jhanavi-24/Crop-Prediction-using-ThingSpeak",
+  },
   {
     title: "Surya Namaskar Trainer",
     icon: Dumbbell,
@@ -28,7 +69,8 @@ const projects = [
       "Developed a reinforcement learning agent using Q-Learning and SARSA algorithms to autonomously navigate warehouse environments.",
     solutionHighlights: ["reinforcement learning", "Q-Learning", "SARSA"],
     tools: ["Python", "Gymnasium", "Reinforcement Learning"],
-    outcome: "Agent successfully learns optimal paths for parcel delivery in complex warehouse grid environments",
+    outcome:
+      "Agent successfully learns optimal paths for parcel delivery in complex warehouse grid environments",
     github: "https://github.com/Jhanavi-24/Warehouse_robot_reinforcement_learning",
   },
   {
@@ -40,10 +82,12 @@ const projects = [
       "Created an AI-powered application that generates food recipes from both image and text inputs, featuring an interactive chatbot powered by OpenAI.",
     solutionHighlights: ["AI-powered", "OpenAI"],
     tools: ["Python", "Flask", "OpenAI API"],
-    outcome: "Delivers personalized recipe recommendations based on available ingredients through natural conversation",
+    outcome:
+      "Delivers personalized recipe recommendations based on available ingredients through natural conversation",
     github: "https://github.com/Jhanavi-24/AI-Food-Bot",
   },
 ]
+
 
 export function Projects() {
   return (
