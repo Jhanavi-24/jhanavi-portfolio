@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function Contact() {
@@ -65,16 +65,6 @@ export function Contact() {
                       <p className="font-medium text-foreground">github.com/Jhanavi-24</p>
                     </div>
                   </a>
-
-                  <div className="flex items-center gap-4 p-4 rounded-lg bg-secondary">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Phone className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">Phone</p>
-                      <p className="font-medium text-foreground">+1 (716) 957-9522</p>
-                    </div>
-                  </div>
 
                   <div className="flex items-center gap-4 p-4 rounded-lg bg-secondary">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">

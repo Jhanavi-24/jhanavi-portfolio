@@ -4,19 +4,27 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "JavaScript", "C", "SQL", "R", "Java", "HTML"],
+    skills: ["Python", "TypeScript", "JavaScript", "SQL", "R", "C", "Java", "HTML"],
   },
   {
-    title: "Frameworks & Libraries",
-    skills: ["Scikit-Learn", "TensorFlow", "PyTorch", "Pandas", "NumPy", "NLTK", "SpaCy", "Flask", "Spark"],
+    title: "ML & AI",
+    skills: ["Scikit-Learn", "TensorFlow", "PyTorch", "YOLOv8", "OpenCV", "MediaPipe", "LLMs", "RAG", "Prompt Engineering", "Reinforcement Learning"],
   },
   {
-    title: "Tools",
-    skills: ["GitHub", "MySQL", "Power BI", "Tableau"],
+    title: "Data & NLP",
+    skills: ["Pandas", "NumPy", "NLTK", "SpaCy", "Jupyter Notebook", "Power BI", "Tableau"],
+  },
+  {
+    title: "Frameworks & Tools",
+    skills: ["Flask", "OpenAI API", "LangChain", "LangGraph", "Spark", "ThingSpeak", "Gymnasium", "GitHub"],
   },
   {
     title: "Cloud (AWS)",
     skills: ["EC2", "S3", "SageMaker", "Cognito", "API Gateway", "DynamoDB"],
+  },
+  {
+    title: "Core Concepts",
+    skills: ["Computer Vision", "Deep Learning", "Data Preprocessing", "Model Deployment", "Embeddings", "Market Segmentation", "Genetic Algorithms"],
   },
 ]
 
@@ -31,7 +39,7 @@ export function Skills() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <ScrollReveal key={category.title} delay={index * 100}>
               <div className="bg-white border border-border/50 rounded-xl p-6 hover:shadow-md transition-shadow h-full">
