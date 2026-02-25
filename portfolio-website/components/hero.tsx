@@ -4,17 +4,37 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Highlight } from "@/components/keyword-highlight"
 import Link from "next/link"
+import dynamic from "next/dynamic"
+
+const Antigravity = dynamic(() => import("@/components/antigravity"), {
+  ssr: false,
+})
 
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(45,130,150,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(45,130,150,0.05),transparent_50%)]" />
+      {/* Interactive Antigravity particle background — sits on top for pointer events */}
+      <div className="absolute inset-0 z-10 pointer-events-auto">
+        <Antigravity
+          count={300}
+          magnetRadius={10}
+          ringRadius={10}
+          waveSpeed={0.4}
+          waveAmplitude={1}
+          particleSize={2}
+          lerpSpeed={0.1}
+          color="#2d8296"
+          autoAnimate={false}
+          particleVariance={1}
+          rotationSpeed={0}
+          depthFactor={1}
+          pulseSpeed={3}
+          particleShape="capsule"
+          fieldStrength={10}
+        />
       </div>
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-20 pointer-events-none">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm animate-fade-up">
             Welcome to my portfolio
@@ -31,7 +51,7 @@ export function Hero() {
             <Highlight>production-grade ML</Highlight> models.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-fade-up-delay-3">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-fade-up-delay-3 pointer-events-auto">
             <Button asChild size="lg" className="gap-2">
               <Link href="#projects">
                 View Projects
@@ -48,7 +68,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="flex items-center justify-center gap-6 animate-fade-up-delay-3">
+          <div className="flex items-center justify-center gap-6 animate-fade-up-delay-3 pointer-events-auto">
             <a
               href="https://github.com/Jhanavi-24"
               target="_blank"
