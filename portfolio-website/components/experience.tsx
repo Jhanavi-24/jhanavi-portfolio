@@ -6,6 +6,54 @@ import { Highlight } from "@/components/keyword-highlight"
 
 const experiences = [
   {
+  title: "AI Developer – AI Bookkeeping Assistant",
+  company: "Triosoft LLC",
+  type: "U.S. Remote",
+  date: "2025 – Present",
+  location: "Remote, United States",
+  bullets: [
+    {
+      text: "Designed and developed a production",
+      highlights: ["AI Bookkeeping system"],
+      suffix:
+        "that converts unstructured bank statements and financial documents into structured accounting ledgers",
+    },
+    {
+      text: "Implemented a",
+      highlights: ["Retrieval-Augmented Generation (RAG) pipeline"],
+      suffix:
+        "using embeddings to retrieve accounting rules and historical vendor mappings for transaction classification",
+    },
+    {
+      text: "Integrated",
+      highlights: ["OpenAI LLMs"],
+      suffix:
+        "with schema-constrained JSON outputs, guardrails, and validation logic to minimize hallucinations",
+    },
+    {
+      text: "Built backend processing services in",
+      highlights: ["Python"],
+      suffix:
+        "for document parsing, transaction normalization, and exception handling workflows",
+    },
+    {
+      text: "Developed confidence scoring and retry logic with fallback review flow, improving reliability of automated classifications",
+      highlights: ["decision-based AI workflow"],
+      suffix: "",
+    },
+  ],
+  skills: [
+    "Python",
+    "LLMs",
+    "RAG",
+    "Embeddings",
+    "Prompt Engineering",
+    "Backend Development",
+    "Data Processing",
+    "API Integration",
+  ],
+},
+  {
     title: "Project Eagle Eyes – Vision AI for Industrial Printing",
     company: "Nissha Medical Technologies",
     type: "Capstone Project",
