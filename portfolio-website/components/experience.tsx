@@ -9,7 +9,7 @@ const experiences = [
   title: "AI Developer – AI Bookkeeping Assistant",
   company: "Triosoft LLC",
   type: "U.S. Remote",
-  date: "2025 – Present",
+  date: "2026 – Present",
   location: "Remote, United States",
   bullets: [
     {
