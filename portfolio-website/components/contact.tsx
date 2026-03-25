@@ -66,6 +66,21 @@ export function Contact() {
                     </div>
                   </a>
 
+                  <a
+                    href="https://github.com/Jhanavi-24/Resume/blob/main/Jhanavi-Putcha-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-primary/10 transition-colors group"
+                  >
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
+                      <Mail className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Resume</p>
+                      <p className="font-medium text-foreground">Download PDF</p>
+                    </div>
+                  </a>
+
                   <div className="flex items-center gap-4 p-4 rounded-lg bg-secondary">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                       <MapPin className="h-5 w-5 text-primary" />

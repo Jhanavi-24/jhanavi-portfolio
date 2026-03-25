@@ -37,32 +37,31 @@ export function Hero() {
       <div className="container mx-auto px-6 relative z-20 pointer-events-none">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm animate-fade-up">
-            Welcome to my portfolio
+            Machine Learning Engineer & Data Scientist
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight text-balance animate-fade-up-delay-1">
             Jhanavi Putcha
           </h1>
           <p className="text-xl md:text-2xl text-primary font-medium mb-6 animate-fade-up-delay-2">
-            Machine Learning Engineer | Data Scientist
+            Building AI-driven systems for computer vision, deep learning, and production ML
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed text-pretty animate-fade-up-delay-3">
-            Building <Highlight>AI-driven</Highlight> solutions that transform data into measurable business impact—from{" "}
-            <Highlight>computer vision</Highlight> systems processing <Highlight>30M+ daily inspections</Highlight> to{" "}
-            <Highlight>production-grade ML</Highlight> models.
+            I design and ship ML systems that turn data into measurable business outcomes — from high-throughput
+            computer-vision pipelines to scalable model deployments and LLM-powered applications.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-fade-up-delay-3 pointer-events-auto">
-            <Button asChild size="lg" className="gap-2">
-              <Link href="#projects">
-                View Projects
-                <ArrowDown className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="bg-white/80 hover:bg-white">
-              <a href="https://github.com/Jhanavi-24/Resume/blob/main/Jhanavi-Putcha-Resume.pdf">
-                View Resume
-              </a>
-            </Button>
+              <Button asChild size="lg" className="gap-2">
+                <Link href="#projects">
+                  View Projects
+                  <ArrowDown className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="bg-white/80 hover:bg-white">
+                <a href="https://github.com/Jhanavi-24/Resume/blob/main/Jhanavi-Putcha-Resume.pdf" target="_blank">
+                  Download Resume
+                </a>
+              </Button>
             <Button asChild variant="secondary" size="lg">
               <Link href="#contact">Contact Me</Link>
             </Button>

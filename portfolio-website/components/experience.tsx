@@ -6,143 +6,39 @@ import { Highlight } from "@/components/keyword-highlight"
 
 const experiences = [
   {
-  title: "AI Developer – AI Bookkeeping Assistant",
-  company: "Triosoft LLC",
-  type: "U.S. Remote",
-  date: "2026 – Present",
-  location: "Remote, United States",
-  bullets: [
-    {
-      text: "Designed and developed a production",
-      highlights: ["AI Bookkeeping system"],
-      suffix:
-        "that converts unstructured bank statements and financial documents into structured accounting ledgers",
-    },
-    {
-      text: "Implemented a",
-      highlights: ["Retrieval-Augmented Generation (RAG) pipeline"],
-      suffix:
-        "using embeddings to retrieve accounting rules and historical vendor mappings for transaction classification",
-    },
-    {
-      text: "Integrated",
-      highlights: ["OpenAI LLMs"],
-      suffix:
-        "with schema-constrained JSON outputs, guardrails, and validation logic to minimize hallucinations",
-    },
-    {
-      text: "Built backend processing services in",
-      highlights: ["Python"],
-      suffix:
-        "for document parsing, transaction normalization, and exception handling workflows",
-    },
-    {
-      text: "Developed confidence scoring and retry logic with fallback review flow, improving reliability of automated classifications",
-      highlights: ["decision-based AI workflow"],
-      suffix: "",
-    },
-  ],
-  skills: [
-    "Python",
-    "LLMs",
-    "RAG",
-    "Embeddings",
-    "Prompt Engineering",
-    "Backend Development",
-    "Data Processing",
-    "API Integration",
-  ],
-},
-  {
-    title: "Project Eagle Eyes – Vision AI for Industrial Printing",
-    company: "Nissha Medical Technologies",
-    type: "Capstone Project",
-    date: "Aug 2025 – Dec 2025",
-    location: "Buffalo, NY",
+    title: "AI/ML Engineer",
+    company: "Triosoft LLC",
+    type: "Hybrid — New York",
+    date: "May 2025 — Present",
+    location: "New York, NY (Hybrid)",
     bullets: [
-      {
-        text: "Architected an AI-driven inspection system to detect and analyze Q-Block defects in ultra-high-speed ticket printing lines processing",
-        highlights: ["AI-driven", "30M+ tickets daily"],
-        suffix: "",
-      },
-      {
-        text: "Trained a",
-        highlights: ["YOLOv8-based object detection model"],
-        suffix: "achieving high accuracy in localizing large and small Q-Blocks from production images",
-      },
-      {
-        text: "Developed color fading and area-based quality analytics by extracting pixel-level features (HEX/RGB, dimensions) from detected regions",
-        highlights: [],
-        suffix: "",
-      },
-      {
-        text: "Built visualization pipelines to track color degradation trends, enabling early detection of machine wear and reducing downtime",
-        highlights: [],
-        suffix: "",
-      },
-      {
-        text: "Implemented automated GOOD/NOT GOOD classification system, significantly reducing manual inspection dependency and improving defect detection consistency",
-        highlights: ["automated GOOD/NOT GOOD classification"],
-        suffix: "",
-      },
+      { text: "Constructed transformer-based NLP models for automated extraction of financial insights from 87+ unstructured reports per week, reducing analyst effort by 18% and improving signal-to-noise ratio in investment research pipelines.", highlights: ["87+ reports/week", "18% analyst effort reduction"], suffix: "" },
+      { text: "Engineered reinforcement learning models for portfolio optimization, simulating 24+ market scenarios per asset class and achieving a 6% improvement in risk-adjusted returns.", highlights: ["reinforcement learning", "6% improvement"], suffix: "" },
+      { text: "Implemented PyTorch/TensorFlow deep learning models for credit risk scoring and market anomaly detection, processing >15 million transaction records monthly and achieving 93% coverage of critical high-risk events.", highlights: [">15M transactions/month", "93% coverage"], suffix: "" },
+      { text: "Deployed generative AI models and LLMs to automatically generate investment summaries from 80+ financial reports weekly, improving turnaround time by 20%.", highlights: ["80+ reports/week", "20% faster"], suffix: "" },
+      { text: "Orchestrated end-to-end MLOps pipelines on AWS for training, evaluation, deployment, and drift monitoring, supporting 95+ automated retraining cycles per quarter with <5s latency for real-time scoring.", highlights: ["AWS", "95+ retraining cycles/quarter"], suffix: "" },
+      { text: "Fine-tuned LLMs using Hugging Face to automate extraction and summarization for 78+ reports weekly, improving insight generation efficiency by 18%.", highlights: ["Hugging Face", "78+ reports/week"], suffix: "" },
+      { text: "Implemented a RAG pipeline combining vector DB retrieval with generative AI to produce context-aware investment insights from 59+ documents weekly, improving information accuracy by 15%.", highlights: ["RAG", "15% accuracy improvement"], suffix: "" },
     ],
-    skills: ["YOLOv8", "Computer Vision", "OpenCV", "Python", "Data Analytics"],
+    skills: ["Transformers", "PyTorch", "TensorFlow", "LLMs", "Hugging Face", "RAG", "AWS", "MLOps"],
   },
   {
-    title: "Artificial Intelligence Intern",
-    company: "AVR Research and Development Pvt. Ltd.",
-    type: "Internship",
-    date: "Feb 2024 – Jun 2024",
-    location: "India",
+    title: "Machine Learning Scientist",
+    company: "LTIMindtree",
+    type: "Full-time",
+    date: "Jan 2022 — Jul 2024",
+    location: "Hyderabad, India",
     bullets: [
-      {
-        text: "Executed comprehensive data pre-processing and cleaning procedures, enhancing dataset quality and",
-        highlights: ["reducing model training time by 25%"],
-        suffix: "",
-      },
-      {
-        text: "Designed and implemented ML models using diverse algorithms (decision trees, random forests, SVMs, neural networks), achieving",
-        highlights: ["15% improvement in predictive accuracy"],
-        suffix: "",
-      },
-      {
-        text: "Conducted in-depth model evaluation and hyperparameter tuning, optimizing performance across multiple deployments",
-        highlights: [],
-        suffix: "",
-      },
-      {
-        text: "Successfully deployed models into production, contributing to data-driven decision-making and measurable business impact",
-        highlights: ["production-grade ML"],
-        suffix: "",
-      },
+      { text: "Architected time-series forecasting models on Spark and Snowflake for predicting vehicle component failures, improving predictive maintenance accuracy by 18% and reducing unplanned downtime by 12% across 25+ production lines.", highlights: ["Spark", "Snowflake", "18% accuracy"], suffix: "" },
+      { text: "Engineered real-time anomaly detection pipelines using LSTM and XGBoost on sensor and telemetry data, identifying 83 critical anomalies per month and increasing system reliability by 15%.", highlights: ["LSTM", "XGBoost", "83 anomalies/month"], suffix: "" },
+      { text: "Designed ETL pipelines in Python and PySpark to process 20 TB/month of vehicle data with low-latency ingestion (<5s), enabling 95% data availability for model training.", highlights: ["20 TB/month", "<5s ingestion"], suffix: "" },
+      { text: "Built interactive Power BI dashboards surfacing 95+ KPIs across fleet health and production efficiency for 17+ stakeholders.", highlights: ["Power BI", "95+ KPIs"], suffix: "" },
+      { text: "Optimized hyperparameter tuning for LightGBM, XGBoost, and LSTM models, improving forecasting precision by 12% and reducing MAE/RMSE by 15%.", highlights: ["LightGBM", "XGBoost", "12% precision"], suffix: "" },
+      { text: "Deployed models on AWS SageMaker with CI/CD and automated retraining, supporting 95+ scheduled model updates per quarter with zero downtime.", highlights: ["SageMaker", "CI/CD"], suffix: "" },
+      { text: "Engineered 25+ features per vehicle from telemetry and maintenance data, improving model performance by 18% and covering 95% of critical components.", highlights: ["feature engineering", "25+ features"], suffix: "" },
+      { text: "Constructed a real-time telemetry anomaly detection system using Kafka and Transformer-based time-series models on SageMaker, detecting 87+ critical anomalies per month and reducing unplanned maintenance by 17%.", highlights: ["Kafka", "Transformer"], suffix: "" },
     ],
-    skills: ["Machine Learning", "Python", "Scikit-Learn", "Data Preprocessing", "Model Deployment"],
-  },
-  {
-    title: "Machine Learning Intern",
-    company: "Feynn Labs",
-    type: "Internship",
-    date: "Mar 2023 – May 2023",
-    location: "Remote",
-    bullets: [
-      {
-        text: "Developed",
-        highlights: ["ML algorithms for market segmentation"],
-        suffix:
-          ", enabling targeted marketing strategies and improving customer engagement through high-value segment identification",
-      },
-      {
-        text: "Collaborated with cross-functional teams to gather, clean, and preprocess large-scale datasets, ensuring data integrity for model training",
-        highlights: [],
-        suffix: "",
-      },
-      {
-        text: "Leveraged data analysis techniques to uncover actionable business insights, directly influencing product positioning and customer acquisition strategies",
-        highlights: ["actionable business insights"],
-        suffix: "",
-      },
-    ],
-    skills: ["Market Segmentation", "Python", "Data Analysis", "Clustering", "Business Intelligence"],
+    skills: ["Time-Series", "Spark", "PySpark", "Kafka", "SageMaker", "Power BI", "Feature Engineering"],
   },
 ]
 
@@ -196,25 +92,28 @@ export function Experience() {
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <ul className="space-y-2 mb-4">
+                        <ul className="space-y-4 mb-4">
                           {exp.bullets.map((bullet, i) => (
-                            <li key={i} className="text-sm text-muted-foreground flex gap-2">
-                              <span className="text-primary mt-1.5 flex-shrink-0">•</span>
-                              <span>
-                                {bullet.text}{" "}
-                                {bullet.highlights.map((h, hi) => (
-                                  <span key={hi}>
-                                    <Highlight>{h}</Highlight>{" "}
-                                  </span>
-                                ))}
-                                {bullet.suffix}
-                              </span>
+                            <li key={i} className="flex gap-4">
+                              <span className="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-primary" />
+                              <div>
+                                <p className="text-sm text-muted-foreground">{bullet.text}</p>
+                                {bullet.highlights && bullet.highlights.length > 0 && (
+                                  <div className="mt-2 flex flex-wrap gap-2">
+                                    {bullet.highlights.map((h, hi) => (
+                                      <Badge key={hi} variant="outline" className="text-xs">
+                                        {h}
+                                      </Badge>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
                             </li>
                           ))}
                         </ul>
-                        <div className="flex flex-wrap gap-1.5">
+                        <div className="mt-2 flex flex-wrap gap-2">
                           {exp.skills.map((skill) => (
-                            <Badge key={skill} variant="secondary" className="text-xs bg-secondary">
+                            <Badge key={skill} variant="secondary" className="text-xs">
                               {skill}
                             </Badge>
                           ))}
