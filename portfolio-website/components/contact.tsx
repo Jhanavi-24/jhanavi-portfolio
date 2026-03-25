@@ -67,7 +67,7 @@ export function Contact() {
                   </a>
 
                   <a
-                    href="https://github.com/Jhanavi-24/Resume/blob/main/Jhanavi-Putcha-Resume.pdf"
+                    href="https://github.com/Jhanavi-24/Resume/blob/main/Jhanavi%20Putcha%20-%20Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-primary/10 transition-colors group"

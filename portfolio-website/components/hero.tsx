@@ -58,7 +58,7 @@ export function Hero() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="bg-white/80 hover:bg-white">
-                <a href="https://github.com/Jhanavi-24/Resume/blob/main/Jhanavi-Putcha-Resume.pdf" target="_blank">
+                <a href="https://github.com/Jhanavi-24/Resume/blob/main/Jhanavi%20Putcha%20-%20Resume.pdf" target="_blank">
                   Download Resume
                 </a>
               </Button>
