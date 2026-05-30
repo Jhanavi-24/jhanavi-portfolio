@@ -74,9 +74,9 @@ export async function POST(req: Request) {
   try {
     const { messages } = await req.json()
 
-    const apiKey = process.env.OPENAI_API_KEY
+    const apiKey = process.env.OPENAI_API_KEY?.trim()
     console.log("API key present:", !!apiKey)
-    console.log("API key prefix:", apiKey?.slice(0, 10))
+    console.log("API key length:", apiKey?.length)
 
     if (!apiKey) {
       return new Response(
