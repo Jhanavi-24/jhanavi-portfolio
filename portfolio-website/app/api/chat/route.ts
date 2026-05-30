@@ -1,7 +1,5 @@
 import OpenAI from "openai"
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-
 const SYSTEM_PROMPT = `You are a friendly, warm, and professional AI assistant representing Jhanavi Putcha's portfolio. Your job is to answer questions visitors ask about Jhanavi — her background, skills, experience, projects, achievements, and how to contact her.
 
 PERSONALITY:
@@ -76,12 +74,18 @@ export async function POST(req: Request) {
   try {
     const { messages } = await req.json()
 
-    if (!process.env.OPENAI_API_KEY) {
+    const apiKey = process.env.OPENAI_API_KEY
+    console.log("API key present:", !!apiKey)
+    console.log("API key prefix:", apiKey?.slice(0, 10))
+
+    if (!apiKey) {
       return new Response(
-        JSON.stringify({ error: "OPENAI_API_KEY is not configured." }),
+        JSON.stringify({ error: "OPENAI_API_KEY is not configured. Please add it to Vercel Environment Variables." }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       )
     }
+
+    const client = new OpenAI({ apiKey })
 
     // Build message history (keep last 10 turns for context)
     const history = (messages as { role: string; text: string }[])

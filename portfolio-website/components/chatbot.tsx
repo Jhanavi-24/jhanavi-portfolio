@@ -278,7 +278,8 @@ export function ChatBot() {
       })
 
       if (!res.ok || !res.body) {
-        throw new Error("API error")
+        const errData = await res.json().catch(() => ({}))
+        throw new Error(errData.error || "API error")
       }
 
       const reader = res.body.getReader()
@@ -296,9 +297,10 @@ export function ChatBot() {
       setMessages([...updatedMessages, { role: "bot", text: full, streaming: false }])
     } catch (err: unknown) {
       if (err instanceof Error && err.name === "AbortError") return
+      const errMsg = err instanceof Error ? err.message : "Something went wrong."
       setMessages([
         ...updatedMessages,
-        { role: "bot", text: "Sorry, something went wrong. Please try again!", streaming: false },
+        { role: "bot", text: `⚠️ ${errMsg}`, streaming: false },
       ])
     } finally {
       setIsStreaming(false)
