@@ -30,13 +30,19 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        isScrolled
+          ? "bg-[rgba(2,8,23,0.85)] backdrop-blur-xl border-b border-[rgba(56,189,248,0.15)] shadow-[0_4px_30px_rgba(56,189,248,0.05)]"
+          : "bg-transparent",
       )}
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl font-semibold text-foreground hover:text-primary transition-colors">
+          <Link
+            href="/"
+            className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-400 hover:from-sky-300 hover:to-purple-300 transition-all duration-300"
+            style={{ textShadow: "none" }}
+          >
             JP
           </Link>
 
@@ -46,16 +52,22 @@ export function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="text-sm text-slate-400 hover:text-sky-400 transition-colors duration-200 relative group"
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-sky-400 to-purple-400 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-slate-300 hover:text-sky-400 hover:bg-sky-400/10"
+            >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               <span className="sr-only">Toggle menu</span>
             </Button>
@@ -64,14 +76,14 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+          <div className="md:hidden mt-4 pb-4 border-t border-[rgba(56,189,248,0.15)] pt-4">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-sm text-slate-400 hover:text-sky-400 transition-colors"
                 >
                   {item.name}
                 </Link>

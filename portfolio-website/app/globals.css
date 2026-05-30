@@ -1,36 +1,39 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Light mode only */
+/* ── Space Theme ── */
 :root {
-  --background: oklch(0.98 0.008 200);
-  --foreground: oklch(0.25 0.02 240);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.02 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.02 240);
-  --primary: oklch(0.45 0.12 200);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.015 200);
-  --secondary-foreground: oklch(0.25 0.02 240);
-  --muted: oklch(0.94 0.01 200);
-  --muted-foreground: oklch(0.45 0.02 240);
-  --accent: oklch(0.92 0.02 200);
-  --accent-foreground: oklch(0.25 0.02 240);
+  --background: #020817;
+  --foreground: #e2e8f0;
+  --card: rgba(15, 23, 42, 0.7);
+  --card-foreground: #e2e8f0;
+  --popover: #0f172a;
+  --popover-foreground: #e2e8f0;
+  --primary: #38bdf8;
+  --primary-foreground: #020817;
+  --secondary: rgba(30, 41, 59, 0.8);
+  --secondary-foreground: #94a3b8;
+  --muted: rgba(30, 41, 59, 0.5);
+  --muted-foreground: #64748b;
+  --accent: #a855f7;
+  --accent-foreground: #f8fafc;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.88 0.02 200);
-  --input: oklch(0.92 0.015 200);
-  --ring: oklch(0.45 0.12 200);
-  --radius: 0.625rem;
+  --border: rgba(56, 189, 248, 0.15);
+  --input: rgba(30, 41, 59, 0.8);
+  --ring: #38bdf8;
+  --radius: 0.75rem;
+  --highlight-bg: rgba(168, 85, 247, 0.25);
 
-  /* Removed section background variables, kept only highlight */
-  --highlight-bg: oklch(0.92 0.04 200);
+  /* Space glow colors */
+  --glow-blue: rgba(56, 189, 248, 0.4);
+  --glow-purple: rgba(168, 85, 247, 0.4);
+  --nebula-1: #0ea5e9;
+  --nebula-2: #a855f7;
+  --nebula-3: #06b6d4;
 }
 
 @custom-variant dark (&:is(.dark *));
-
-/* Removed dark theme block since light mode only */
 
 @theme inline {
   --font-sans: "Inter", "Inter Fallback", sans-serif;
@@ -58,22 +61,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
-  /* Removed section color variables, kept only highlight */
   --color-highlight: var(--highlight-bg);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
@@ -82,52 +70,146 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: #020817;
+    color: #e2e8f0;
   }
   html {
     scroll-behavior: smooth;
   }
 }
 
-/* Scroll reveal animation utilities */
+/* ── Space Card (glassmorphism) ── */
+.space-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 0.75rem;
+}
+
+.space-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.1), 0 0 40px rgba(168, 85, 247, 0.05);
+}
+
+/* ── Glow effects ── */
+.glow-text {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 40px rgba(56, 189, 248, 0.3);
+}
+
+.glow-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6), 0 0 40px rgba(168, 85, 247, 0.3);
+}
+
+.glow-border {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2), inset 0 0 15px rgba(56, 189, 248, 0.05);
+}
+
+/* ── Nebula gradient backgrounds ── */
+.nebula-bg {
+  background: radial-gradient(ellipse at 20% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 80%, rgba(6, 182, 212, 0.03) 0%, transparent 50%);
+}
+
+/* ── Scroll reveal animations ── */
 @layer utilities {
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
     opacity: 0;
   }
-
   .animate-fade-up-delay-1 {
     animation: fadeUp 0.6s ease-out 0.1s forwards;
     opacity: 0;
   }
-
   .animate-fade-up-delay-2 {
     animation: fadeUp 0.6s ease-out 0.2s forwards;
     opacity: 0;
   }
-
   .animate-fade-up-delay-3 {
     animation: fadeUp 0.6s ease-out 0.3s forwards;
     opacity: 0;
   }
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Keyword highlight styling */
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(56, 189, 248, 0.6), 0 0 50px rgba(56, 189, 248, 0.2); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(var(--orbit-r, 60px)) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(var(--orbit-r, 60px)) rotate(-360deg); }
+}
+
+/* ── Keyword highlight ── */
 .keyword-highlight {
-  background: linear-gradient(120deg, var(--highlight-bg) 0%, var(--highlight-bg) 100%);
+  background: linear-gradient(120deg, rgba(168, 85, 247, 0.3) 0%, rgba(56, 189, 248, 0.2) 100%);
   background-repeat: no-repeat;
   background-size: 100% 40%;
   background-position: 0 90%;
   padding: 0 0.15em;
   border-radius: 2px;
+}
+
+/* ── Section divider ── */
+.space-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), rgba(168, 85, 247, 0.3), transparent);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020817;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.5);
+}
+
+/* ── Badge override for space theme ── */
+.space-badge {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #7dd3fc;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.space-badge:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
 }
